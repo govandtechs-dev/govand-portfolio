@@ -1,5 +1,6 @@
 import { createServerSupabaseClient } from '@/lib/supabase-server'
 import { SiteProfile, Project, Experience, Skill } from '@/types'
+import PrintButton from '@/components/PrintButton'
 
 const DEFAULT_PROFILE: SiteProfile = {
   id: 1, full_name: 'Govand Esmail Othman', headline: 'Full-Stack Software Developer',
@@ -41,12 +42,7 @@ export default async function CVPage() {
         >
           ← Back
         </a>
-        <button
-          onClick={() => window.print()}
-          className="bg-[#dc143c] hover:bg-[#a50e2d] text-white text-sm font-semibold px-5 py-2 rounded-xl transition-colors"
-        >
-          Download / Print PDF
-        </button>
+        <PrintButton />
       </div>
 
       <div className="min-h-screen bg-white text-[#111] font-sans px-0 print:px-0">
