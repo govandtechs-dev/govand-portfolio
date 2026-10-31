@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
-        playfair: ["var(--font-playfair)", "serif"],
+        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+        playfair: ["var(--font-playfair)", "Playfair Display", "Georgia", "serif"],
       },
       colors: {
         crimson: "#dc143c",
