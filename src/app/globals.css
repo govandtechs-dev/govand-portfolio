@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --crimson: #dc143c;
+  --crimson-dark: #a50e2d;
+  --charcoal: #0e0e0e;
+  --card-bg: #161616;
+  --border: #2a2a2a;
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-playfair: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+/* Smooth scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--crimson) var(--charcoal);
+}
+
+/* Selection */
+::selection {
+  background: var(--crimson);
+  color: white;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, var(--crimson) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover border glow */
+.card-glow {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card-glow:hover {
+  box-shadow: 0 0 0 1px var(--crimson), 0 8px 32px rgba(220, 20, 60, 0.15);
+  border-color: var(--crimson) !important;
+}
+
+/* Animated underline for nav links */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--crimson);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
