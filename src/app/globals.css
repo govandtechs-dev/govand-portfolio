@@ -74,6 +74,22 @@ body {
 .animate-float-1 { animation: float-hero-1 14s ease-in-out infinite; }
 .animate-float-2 { animation: float-hero-2 18s ease-in-out infinite; }
 
+/* Infinite Ticker Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 /* Custom Glow Buttons */
 .btn-primary {
   background: linear-gradient(135deg, #e6194b 0%, #b8143c 100%);

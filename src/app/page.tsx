@@ -2,10 +2,12 @@ import { createServerSupabaseClient } from "@/lib/supabase-server";
 import { SiteProfile, Project, Experience, Skill } from "@/types";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import TechTicker from "@/components/TechTicker";
 import Projects from "@/components/Projects";
 import ExperienceSection from "@/components/ExperienceSection";
 import Skills from "@/components/Skills";
 import About from "@/components/About";
+import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
 
 const DEFAULT_PROFILE: SiteProfile = {
@@ -54,10 +56,12 @@ export default async function Home() {
       <Navbar />
       <main>
         <Hero profile={profile} />
+        <TechTicker />
         <Projects projects={projects} />
         <ExperienceSection experience={experience} />
         <Skills skills={skills} />
         <About profile={profile} />
+        <ContactCTA />
       </main>
       <Footer />
     </>
