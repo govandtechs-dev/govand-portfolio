@@ -58,37 +58,45 @@ export default function About({ profile }: AboutProps) {
           </div>
         </div>
 
-        {/* Right: decorative card */}
+        {/* Right: decorative card with portrait */}
         <div className="relative">
-          <div className="bg-[#161616] border border-[#2a2a2a] rounded-2xl p-8">
-            <div className="font-playfair text-8xl font-black text-[#dc143c]/10 select-none leading-none mb-6">
-              GEO
+          <div className="bg-[#141416] border border-[#242428] rounded-2xl p-7 card-glow overflow-hidden">
+            {/* Portrait Image */}
+            <div className="relative w-full h-80 rounded-xl overflow-hidden mb-6 border border-[#2a2a2e] shadow-lg">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/govand.png"
+                alt={profile.full_name}
+                className="w-full h-full object-cover object-top filter brightness-95 contrast-105 hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#141416] via-transparent to-transparent opacity-80" />
             </div>
+
             <div className="text-2xl font-playfair font-bold text-white mb-1">
               {profile.full_name}
             </div>
             <div className="text-[#dc143c] text-sm font-semibold mb-6">
               {profile.headline}
             </div>
-            <div className="h-px bg-[#2a2a2a] mb-6" />
+            <div className="h-px bg-[#242428] mb-6" />
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
-                <div className="text-zinc-600 mb-1">Education</div>
-                <div className="text-zinc-300">BSc in IT (2023 - 2027)</div>
+                <div className="text-zinc-500 mb-1">Education</div>
+                <div className="text-zinc-200">BSc in IT (2023 - 2027)</div>
               </div>
               <div>
-                <div className="text-zinc-600 mb-1">University</div>
-                <div className="text-zinc-300">Sulaimani Polytechnic</div>
+                <div className="text-zinc-500 mb-1">University</div>
+                <div className="text-zinc-200">Sulaimani Polytechnic</div>
               </div>
               <div>
-                <div className="text-zinc-600 mb-1">Speciality</div>
-                <div className="text-zinc-300">Full-Stack & Mobile</div>
+                <div className="text-zinc-500 mb-1">Speciality</div>
+                <div className="text-zinc-200">Full-Stack & Mobile</div>
               </div>
               <div>
-                <div className="text-zinc-600 mb-1">Status</div>
+                <div className="text-zinc-500 mb-1">Status</div>
                 <div className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block animate-pulse" />
-                  <span className="text-zinc-300">Available</span>
+                  <span className="text-zinc-200">Available</span>
                 </div>
               </div>
             </div>
