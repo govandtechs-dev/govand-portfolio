@@ -38,6 +38,17 @@ export default function About({ profile }: AboutProps) {
                 </a>
               </div>
             )}
+            {profile.phone && (
+              <div className="flex items-center gap-3 text-sm">
+                <span className="text-zinc-600">Phone</span>
+                <a
+                  href={`tel:${profile.phone.replace(/\s+/g, '')}`}
+                  className="text-white hover:text-[#dc143c] transition-colors"
+                >
+                  {profile.phone}
+                </a>
+              </div>
+            )}
             {profile.location && (
               <div className="flex items-center gap-3 text-sm">
                 <span className="text-zinc-600">Location</span>

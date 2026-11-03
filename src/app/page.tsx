@@ -15,6 +15,9 @@ const DEFAULT_PROFILE: SiteProfile = {
   bio: "Passionate Full-Stack Developer specializing in building scalable web and cross-platform mobile applications. Dedicated to crafting seamless user experiences with modern frontends, high-performance APIs, and robust architectures.",
   email: "govand.techs@gmail.com",
   location: "Sulaymaniyah, Iraq",
+  phone: "+964 771 878 5818",
+  github_url: "https://github.com/govandtechs-dev",
+  linkedin_url: "https://www.linkedin.com/in/govand-esmail-othman-bb39ba410?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
   updated_at: "",
 };
 

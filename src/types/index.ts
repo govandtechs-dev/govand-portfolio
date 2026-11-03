@@ -5,6 +5,7 @@ export interface SiteProfile {
   bio: string
   email: string
   location: string
+  phone?: string
   github_url?: string
   linkedin_url?: string
   updated_at: string
