@@ -151,6 +151,25 @@ export default async function CVPage() {
             </section>
           )}
 
+          {/* Languages */}
+          <section className="mb-8">
+            <h2 className="text-xs font-bold text-[#dc143c] uppercase tracking-widest mb-4">Languages</h2>
+            <div className="grid grid-cols-3 gap-4 text-sm">
+              <div>
+                <span className="font-bold text-[#111] block">Kurdish</span>
+                <span className="text-gray-500 text-xs">Native</span>
+              </div>
+              <div>
+                <span className="font-bold text-[#111] block">English</span>
+                <span className="text-gray-500 text-xs">Fluent / Professional</span>
+              </div>
+              <div>
+                <span className="font-bold text-[#111] block">Arabic</span>
+                <span className="text-gray-500 text-xs">Conversational</span>
+              </div>
+            </div>
+          </section>
+
           {/* Footer */}
           <div className="pt-8 border-t border-gray-200 flex items-center justify-between text-xs text-gray-400">
             <span>CV generated from live portfolio data</span>
