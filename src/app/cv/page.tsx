@@ -4,7 +4,7 @@ import PrintButton from '@/components/PrintButton'
 
 const DEFAULT_PROFILE: SiteProfile = {
   id: 1, full_name: 'Govand Esmail Othman', headline: 'Full-Stack Software Developer',
-  bio: 'Building thoughtful, high-performance digital products with modern web and mobile technologies.',
+  bio: 'Passionate Full-Stack Developer specializing in building scalable web and cross-platform mobile applications. Dedicated to crafting seamless user experiences with modern frontends, high-performance APIs, and robust architectures.',
   email: 'govand.techs@gmail.com', location: 'Sulaymaniyah, Iraq', updated_at: '',
 }
 
