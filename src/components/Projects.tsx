@@ -52,7 +52,8 @@ const FEATURED_PROJECTS: Project[] = [
 ];
 
 export default function Projects({ projects }: ProjectsProps) {
-  const items = projects && projects.length > 0 ? projects : FEATURED_PROJECTS;
+  // If database has 1 or fewer items, show the full 4 curated featured projects
+  const items = projects && projects.length >= 2 ? projects : FEATURED_PROJECTS;
 
   return (
     <section id="projects" className="py-24 px-6">
