@@ -4,13 +4,13 @@ interface HeroProps {
   profile: SiteProfile;
 }
 
-const skills = ["React / Next.js", "Flutter / Dart", "C# / .NET", "SQL / PostgreSQL", "Git / GitHub"];
+const skills = ["React / Next.js", "Flutter / Dart", "C# / .NET", "SQL / PostgreSQL", "Git / GitHub", "Desktop Apps"];
 
 export default function Hero({ profile }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden"
     >
       {/* Dynamic Animated Ambient Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -38,54 +38,95 @@ export default function Hero({ profile }: HeroProps) {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 w-full z-10">
-        <div className="max-w-3xl">
-          {/* Badge */}
-          <div className="animate-fade-up inline-flex items-center gap-2 border border-[#2a2a2a] bg-[#141416]/80 backdrop-blur-md rounded-full px-4 py-1.5 mb-8 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-[#dc143c] animate-ping inline-block" />
-            <span className="text-xs text-zinc-300 font-medium tracking-wider uppercase">
-              Available for work
-            </span>
-          </div>
-
-          {/* Headline */}
-          <h1 className="animate-fade-up delay-100 font-playfair text-5xl md:text-7xl font-black leading-[1.05] mb-6">
-            <span className="text-white drop-shadow-sm">{profile.full_name}</span>
-            <br />
-            <span className="gradient-text">{profile.headline}</span>
-          </h1>
-
-          {/* Sub */}
-          <p className="animate-fade-up delay-200 text-lg text-zinc-300 leading-relaxed mb-10 max-w-xl">
-            {profile.bio ||
-              "Building thoughtful, high-performance digital products with modern web and mobile technologies."}
-          </p>
-
-          {/* Skill tags */}
-          <div className="animate-fade-up delay-300 flex flex-wrap gap-2.5 mb-10">
-            {skills.map((s) => (
-              <span
-                key={s}
-                className="text-xs font-medium border border-[#2a2a2a] bg-[#141416]/60 backdrop-blur-sm text-zinc-300 hover:text-white hover:border-[#dc143c] transition-all duration-300 px-3.5 py-1.5 rounded-full hover:scale-105"
-              >
-                {s}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Left Column: Text & CTAs */}
+          <div className="lg:col-span-7">
+            {/* Badge */}
+            <div className="animate-fade-up inline-flex items-center gap-2 border border-[#2a2a2a] bg-[#141416]/80 backdrop-blur-md rounded-full px-4 py-1.5 mb-6 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#dc143c] animate-ping inline-block" />
+              <span className="text-xs text-zinc-300 font-medium tracking-wider uppercase">
+                Available for work
               </span>
-            ))}
+            </div>
+
+            {/* Headline */}
+            <h1 className="animate-fade-up delay-100 font-playfair text-5xl md:text-7xl font-black leading-[1.05] mb-5">
+              <span className="text-white drop-shadow-sm">{profile.full_name}</span>
+              <br />
+              <span className="gradient-text">{profile.headline}</span>
+            </h1>
+
+            {/* Tagline inspired by graphic */}
+            <div className="animate-fade-up delay-200 border-l-2 border-[#dc143c] pl-4 my-6">
+              <p className="text-lg md:text-xl text-zinc-200 font-medium leading-relaxed">
+                Building modern Web, Mobile & Windows Applications with clean code and scalable architecture.
+              </p>
+            </div>
+
+            {/* Pillars chips from poster */}
+            <div className="animate-fade-up delay-300 grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+              {[
+                { title: "Frontend", desc: "React & Next.js" },
+                { title: "Backend", desc: "C# .NET & Node" },
+                { title: "Database", desc: "SQL & Cloud" },
+                { title: "Desktop & Apps", desc: "Flutter & Windows" },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-[#141416]/80 border border-[#242428] rounded-xl p-3 text-center card-glow"
+                >
+                  <div className="text-white font-semibold text-xs tracking-wide">{item.title}</div>
+                  <div className="text-zinc-500 text-[11px] mt-0.5">{item.desc}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Skill tags */}
+            <div className="animate-fade-up delay-300 flex flex-wrap gap-2 mb-8">
+              {skills.map((s) => (
+                <span
+                  key={s}
+                  className="text-xs font-medium border border-[#2a2a2a] bg-[#141416]/60 backdrop-blur-sm text-zinc-300 hover:text-white hover:border-[#dc143c] transition-all duration-300 px-3 py-1.5 rounded-full"
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
+
+            {/* CTAs */}
+            <div className="animate-fade-up delay-400 flex items-center gap-4 flex-wrap">
+              <a
+                href="#projects"
+                className="bg-[#dc143c] hover:bg-[#a50e2d] hover:shadow-[0_0_25px_rgba(220,20,60,0.5)] hover:-translate-y-0.5 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300"
+              >
+                View Projects
+              </a>
+              <a
+                href="/cv"
+                className="border border-[#2a2a2a] bg-[#141416]/50 hover:bg-[#141416] hover:border-[#dc143c] hover:-translate-y-0.5 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300"
+              >
+                Download CV
+              </a>
+            </div>
           </div>
 
-          {/* CTAs */}
-          <div className="animate-fade-up delay-400 flex items-center gap-4 flex-wrap">
-            <a
-              href="#projects"
-              className="bg-[#dc143c] hover:bg-[#a50e2d] hover:shadow-[0_0_25px_rgba(220,20,60,0.5)] hover:-translate-y-0.5 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300"
-            >
-              View Projects
-            </a>
-            <a
-              href="/cv"
-              className="border border-[#2a2a2a] bg-[#141416]/50 hover:bg-[#141416] hover:border-[#dc143c] hover:-translate-y-0.5 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300"
-            >
-              Download CV
-            </a>
+          {/* Right Column: Featured Banner Poster */}
+          <div className="lg:col-span-5 animate-fade-up delay-200">
+            <div className="relative rounded-3xl p-2 bg-gradient-to-b from-[#242428] to-[#141416] border border-[#2a2a2e] shadow-2xl card-glow overflow-hidden group">
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-black">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/hero-banner.png"
+                  alt="Full Stack Developer Graphic"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 bg-black/70 backdrop-blur-md border border-white/10 rounded-xl p-3 text-center">
+                  <div className="text-xs uppercase tracking-widest text-[#dc143c] font-bold">Speciality</div>
+                  <div className="text-white text-sm font-semibold mt-0.5">Full Stack Web & Windows Architecture</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -94,7 +135,7 @@ export default function Hero({ profile }: HeroProps) {
           {[
             { value: "3+", label: "Years experience" },
             { value: "20+", label: "Projects shipped" },
-            { value: "5", label: "Core technologies" },
+            { value: "6+", label: "Core technologies" },
             { value: "100%", label: "Client satisfaction" },
           ].map((s) => (
             <div
