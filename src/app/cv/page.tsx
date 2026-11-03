@@ -69,6 +69,25 @@ export default async function CVPage() {
             </div>
           </div>
 
+          {/* Education */}
+          <section className="mb-8">
+            <h2 className="text-xs font-bold text-[#dc143c] uppercase tracking-widest mb-4">Education</h2>
+            <div>
+              <div className="flex items-start justify-between">
+                <div>
+                  <div className="font-bold text-[#111]">Bachelor’s Degree in Information Technology (BSc IT)</div>
+                  <div className="text-gray-500 text-sm">Sulaimani Polytechnic University</div>
+                </div>
+                <div className="text-xs text-gray-400 shrink-0 ml-4 mt-0.5">
+                  2023 — Expected June 2027
+                </div>
+              </div>
+              <p className="text-gray-600 text-sm mt-1.5 leading-relaxed">
+                Focus on Software Engineering, Database Systems, Network Architecture, and Advanced Web & Mobile Development.
+              </p>
+            </div>
+          </section>
+
           {/* Experience */}
           {experience.length > 0 && (
             <section className="mb-8">

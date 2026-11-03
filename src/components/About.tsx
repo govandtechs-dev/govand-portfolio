@@ -73,8 +73,16 @@ export default function About({ profile }: AboutProps) {
             <div className="h-px bg-[#2a2a2a] mb-6" />
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
+                <div className="text-zinc-600 mb-1">Education</div>
+                <div className="text-zinc-300">BSc in IT (2023 - 2027)</div>
+              </div>
+              <div>
+                <div className="text-zinc-600 mb-1">University</div>
+                <div className="text-zinc-300">Sulaimani Polytechnic</div>
+              </div>
+              <div>
                 <div className="text-zinc-600 mb-1">Speciality</div>
-                <div className="text-zinc-300">Full-Stack Dev</div>
+                <div className="text-zinc-300">Full-Stack & Mobile</div>
               </div>
               <div>
                 <div className="text-zinc-600 mb-1">Status</div>
