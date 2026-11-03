@@ -5,7 +5,7 @@ import PrintButton from '@/components/PrintButton'
 const DEFAULT_PROFILE: SiteProfile = {
   id: 1, full_name: 'Govand Esmail Othman', headline: 'Full-Stack Software Developer',
   bio: 'Building thoughtful, high-performance digital products with modern web and mobile technologies.',
-  email: 'govand.techs@gmail.com', location: '', updated_at: '',
+  email: 'govand.techs@gmail.com', location: 'Sulaymaniyah, Iraq', updated_at: '',
 }
 
 export const instant = false;

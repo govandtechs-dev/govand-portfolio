@@ -14,7 +14,7 @@ const DEFAULT_PROFILE: SiteProfile = {
   headline: "Full-Stack Software Developer",
   bio: "Building thoughtful, high-performance digital products with modern web and mobile technologies.",
   email: "govand.techs@gmail.com",
-  location: "",
+  location: "Sulaymaniyah, Iraq",
   updated_at: "",
 };
 
