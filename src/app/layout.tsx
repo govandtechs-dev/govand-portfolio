@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import BackgroundDecorations from "@/components/BackgroundDecorations";
 import "./globals.css";
 
 const inter = Inter({
@@ -27,9 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased bg-[#0e0e0e] text-white`}
+        className={`${inter.variable} ${playfair.variable} antialiased bg-[#08080a] text-white relative min-h-screen`}
       >
-        {children}
+        <BackgroundDecorations />
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );

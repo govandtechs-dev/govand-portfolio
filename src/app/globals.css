@@ -10,19 +10,32 @@
   --font-playfair: 'Playfair Display', Georgia, serif;
 }
 
-/* Base Body & Noise Background */
+/* Base Body with Micro-Dot Architectural Grid & Radial Ambient Vignette */
 body {
   background-color: var(--charcoal);
   color: #f3f4f6;
   overflow-x: hidden;
   font-family: var(--font-inter);
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 32px 32px, 96px 96px, 96px 96px;
+  background-position: 0 0, 0 0, 0 0;
+}
+
+/* Background Crosshair Markers */
+.bg-crosshair {
+  background-image: 
+    radial-gradient(circle at center, rgba(230, 25, 75, 0.15) 1px, transparent 1px);
+  background-size: 64px 64px;
 }
 
 /* Glassmorphism backdrop */
 .glass-panel {
-  background: rgba(16, 16, 20, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(16, 16, 20, 0.7);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -48,7 +61,7 @@ body {
   background-clip: text;
 }
 
-/* Interactive Card Physics & Glow */
+/* Interactive Card Physics & Subtle Circuit Line */
 .card-glow {
   position: relative;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -56,7 +69,7 @@ body {
 
 .card-glow:hover {
   transform: translateY(-6px);
-  border-color: rgba(230, 25, 75, 0.45) !important;
+  border-color: rgba(230, 25, 75, 0.5) !important;
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 25px -5px var(--crimson-glow);
 }
 
